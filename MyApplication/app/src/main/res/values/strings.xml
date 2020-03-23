@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My First Kotlin Application</string>
+    <string name="app_name">anative</string>
     <string name="roll_label">Roll</string>
     <string name="count_up">COUNT UP</string>
     <string name="clear">CLEAR</string>
