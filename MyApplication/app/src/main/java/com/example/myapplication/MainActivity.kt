@@ -24,13 +24,17 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val resultText: TextView = findViewById(R.id.result_text)
         val resultImage: ImageView = findViewById(R.id.dice_image)
+        val resultImage2: ImageView = findViewById(R.id.dice_image2)
         val randomInt = (1..6).random()
+        val randomInt2 = (1..6).random()
 
         val drawbleResource = pickImage(randomInt)
+        val drawbleResource2 = pickImage(randomInt2)
 
         resultImage.setImageResource(drawbleResource)
+        resultImage2.setImageResource(drawbleResource2)
 
-        resultText.text = randomInt.toString()
+        resultText.text = randomInt.toString() + " & " + randomInt2.toString()
         Toast.makeText(this, "button cliked",
             Toast.LENGTH_SHORT).show()
     }
@@ -49,26 +53,44 @@ class MainActivity : AppCompatActivity() {
     private fun countUp() {
         val resultText: TextView = findViewById(R.id.result_text)
         val resultImage: ImageView = findViewById(R.id.dice_image)
+        val resultImage2: ImageView = findViewById(R.id.dice_image2)
 
         if (resultText.text.toString() == "Hello World!"){
-            resultText.text = "1"
+            resultText.text = "1 & 1"
             resultImage.setImageResource(R.drawable.dice_1)
+            resultImage2.setImageResource(R.drawable.dice_1)
+
         } else {
-            if (resultText.text.toString().toInt() < 6) {
-                val num: Int = resultText.text.toString().toInt() + 1
-                resultText.text = num.toString()
-                val drawbleResource = pickImage(num)
+            var text = ""
+            var text2 = ""
+            val numbers = resultText.text.toString().split(" & ")
+            if (numbers[0].toInt() < 6) {
+                val drawbleResource = pickImage(numbers[0].toInt()+1)
                 resultImage.setImageResource(drawbleResource)
+                text = (numbers[0].toInt()+1).toString() + " & "
+            } else {
+                text = "6 & "
             }
+            if (numbers[1].toInt() < 6) {
+                val drawbleResource2 = pickImage(numbers[1].toInt()+1)
+                resultImage2.setImageResource(drawbleResource2)
+                text2 = (numbers[1].toInt()+1).toString()
+            } else {
+                text2 = "6"
+            }
+            resultText.text = text + text2
         }
     }
 
     private fun clear() {
         val resultText: TextView = findViewById(R.id.result_text)
         val resultImage: ImageView = findViewById(R.id.dice_image)
+        val resultImage2: ImageView = findViewById(R.id.dice_image2)
+
 
         resultText.text = "Hello World!"
         resultImage.setImageResource(R.drawable.empty_dice)
+        resultImage2.setImageResource(R.drawable.empty_dice)
     }
 }
 
