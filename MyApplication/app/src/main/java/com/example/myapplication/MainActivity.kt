@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
             resultImage2.setImageResource(R.drawable.dice_1)
 
         } else {
-            var text = ""
-            var text2 = ""
+            lateinit var text: String
+            lateinit var text2: String
             val numbers = resultText.text.toString().split(" & ")
             if (numbers[0].toInt() < 6) {
                 val drawbleResource = pickImage(numbers[0].toInt()+1)
