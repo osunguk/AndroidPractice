@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,9 +17,14 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.roll_button)
         val countButton: Button = findViewById(R.id.count_up)
         val clearButton: Button = findViewById(R.id.clear_data)
+        val nextButton: Button = findViewById(R.id.next_button)
         rollButton.setOnClickListener{ rollDice() }
         countButton.setOnClickListener { countUp() }
         clearButton.setOnClickListener { clear() }
+        nextButton.setOnClickListener {
+            val intent = Intent(this, Main2Activity::class.java)
+            startActivity(intent)
+        }
 
     }
     private fun rollDice() {
