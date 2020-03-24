@@ -10,13 +10,13 @@
 
 +- res	: 뷰, 레이아웃 관련 파일 (UI 관련)
 
-​	+- drawable	: 이미지 관련 파일들
-
-​	+- layout	: 레이아웃 xml 파일들ㅇ (activity_main.xml)
-
-​	+- mipmap	: 앱 아이콘 이미지
-
-​	+- values	: 문자열, 색상 등 앱의 뷰와 관련된 설정 변수들 (strings.xml colors.xml styles.xml)
+	+- drawable	: 이미지 관련 파일들
+	
+	+- layout	: 레이아웃 xml 파일들ㅇ (activity_main.xml)
+	
+	+- mipmap	: 앱 아이콘 이미지
+	
+	+- values	: 문자열, 색상 등 앱의 뷰와 관련된 설정 변수들 (strings.xml colors.xml styles.xml)
 
 
 
@@ -42,6 +42,28 @@ bulid.gradle (:Project name)
 ---
 
 
+
+### Layout 클래스 종류
+
+---
+
+- LinearLayout
+  선형으로 된 레이아웃 구조로 View 들을 가로 또는 세로로 나열할 때 사용하는 클래스
+  크기와 관계없이 한줄로 배열되며 자식들은 중첩되지 않고 stack 처럼 쌓인다
+  - Layout Weight
+  위젯들의 영역을 고정 치수가 아닌 전체 영역 대비 비율의 개념으로 지정할 수 있다
+- RelativeLayout
+  상대적인 위치를 설정하여 레이아웃을 구성할 수 있는 클래스
+  자유도가 높은 만큼 조절하는 난이도도 까다로워서 여러 클래스와 섞어 쓰면서 개발하는게 좋다
+  자식들 간에 중첩이 되기때문에 세밀한 조절이 필요하다
+- FrameLayout
+  주로 하나의 자식 View 위젯만 표시할 때 사용하는 클래스
+  여러 Fragment를 동일한 위치 내에서 교체하여 표시하고자 할 때, 컨테이너처럼 사용할 수 있다
+- TableLayout
+  자식들을 행과 열로 나누어 표시하는 클래스
+- ListView & GridView
+  이름은 View로 되어있지만 Layout 클래스의 종류들
+  ![리스트 뷰와 그리드 뷰](https://t1.daumcdn.net/cfile/tistory/23148E39579842EB19)
 
 
 
@@ -157,4 +179,3 @@ bulid.gradle (:Project name)
   
 
 - 
-
