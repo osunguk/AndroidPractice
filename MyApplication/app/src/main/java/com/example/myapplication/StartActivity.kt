@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class start : AppCompatActivity() {
+class StartActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class start : AppCompatActivity() {
 
         val inputText: Button = findViewById(R.id.button3)
         inputText.setOnClickListener {
-            val intent = Intent( this, InputText::class.java)
+            val intent = Intent( this, InputTextActivity::class.java)
             startActivity(intent)
         }
 
