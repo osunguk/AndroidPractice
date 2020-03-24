@@ -29,6 +29,8 @@ class start : AppCompatActivity() {
             val intent = Intent( this, InputText::class.java)
             startActivity(intent)
         }
+
+
     }
 
 
