@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:onClick="pageBackMove"
+        android:scaleType="fitCenter"
+        android:src="@drawable/arrow_left_black" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="다시만나 \n정말 반가워요!"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/InputDatalabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="이메일 입력" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30px"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:hint="example@zeroweb.com" />
+
+            <ImageView
+                android:id="@+id/email_refresh"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cancel_gray" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/InputDatalabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30px"
+            android:text="비밀번호" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/pw_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:hint="********" />
+
+            <ImageView
+                android:id="@+id/pw_refresh"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cancel_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pw_valid_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호는 6자 이상 12자 이하입니다"
+            android:textColor="@color/colorRed"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/check_input_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="입력하지 않은 정보가 있습니다"
+        android:textColor="@color/colorRed"
+        android:textSize="12dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/custombtn"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:text="비밀번호를 잃어버리셨나요?"
+        android:textColor="@color/paleBlack" />
+
+
+</LinearLayout>

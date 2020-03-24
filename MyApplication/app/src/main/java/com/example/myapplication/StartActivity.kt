@@ -30,7 +30,9 @@ class StartActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        findViewById<Button>(R.id.button4).setOnClickListener {
+            startActivity(Intent( this, LoginActivity::class.java))
+        }
     }
 
 
