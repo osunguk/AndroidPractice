@@ -9,7 +9,7 @@ class StartActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.start)
+        setContentView(R.layout.activity_start)
 
 
         val diceRoll: Button = findViewById(R.id.button1)
@@ -32,6 +32,10 @@ class StartActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.button4).setOnClickListener {
             startActivity(Intent( this, LoginActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.button5).setOnClickListener {
+            startActivity(Intent(this, EtcActivity::class.java))
         }
     }
 
