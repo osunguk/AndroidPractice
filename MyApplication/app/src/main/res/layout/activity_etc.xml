@@ -144,29 +144,37 @@
         android:gravity="center"
         android:text="내가 방문한 장소 공유하고 \n 보너스 골드 받으세요" />
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/version"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/version_info"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:gravity="center_vertical"
             android:text="버전정보"
-            android:textSize="18dp" />
+            android:textSize="15dp" />
         <TextView
+            android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_toStartOf="@+id/temp"
+            android:layout_centerVertical="true"
             android:text="1.0.3"
             android:alpha="0.7" />
         <TextView
+            android:id="@+id/temp"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="right"
             android:text="업데이트"/>
-    </LinearLayout>
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
@@ -177,9 +185,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:drawableEnd="@drawable/arrow_right_gray"
         android:gravity="center_vertical"
         android:text="공지사항"
-        android:textSize="18dp" />
+        android:textSize="15dp" />
 
     <View
         android:layout_width="match_parent"
@@ -193,7 +202,7 @@
         android:drawableEnd="@drawable/arrow_right_gray"
         android:gravity="center_vertical"
         android:text="사용법"
-        android:textSize="18dp" />
+        android:textSize="15dp" />
 
     <View
         android:layout_width="match_parent"
@@ -207,7 +216,7 @@
         android:drawableEnd="@drawable/arrow_right_gray"
         android:gravity="center_vertical"
         android:text="고객센터"
-        android:textSize="18dp" />
+        android:textSize="15dp" />
 
     <View
         android:layout_width="match_parent"
@@ -221,7 +230,7 @@
         android:drawableEnd="@drawable/arrow_right_gray"
         android:gravity="center_vertical"
         android:text="알림설정"
-        android:textSize="18dp" />
+        android:textSize="15dp" />
 
     <View
         android:layout_width="match_parent"
@@ -235,7 +244,7 @@
         android:drawableEnd="@drawable/arrow_right_gray"
         android:gravity="center_vertical"
         android:text="이용약관"
-        android:textSize="18dp" />
+        android:textSize="15dp" />
 
     <View
         android:layout_width="match_parent"
