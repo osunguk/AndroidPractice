@@ -13,6 +13,7 @@
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".InputTextActivity"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".EtcActivity"></activity>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
