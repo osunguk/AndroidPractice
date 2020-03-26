@@ -15,21 +15,21 @@
 
 [디렉토리 구조](#app)
 
-[Gradle Scripts](#Gradle Scripts)
+[Gradle Scripts](#Gradle-Scripts)
 
-[findViewById() 없애기](#findViewById() 없애기)
+[findViewById() 없애기](#findViewById()-없애기)
 
-[NullPointException 피하기](#NullPointException 피하기 )
+[NullPointException 피하기](#NullPointException-피하기)
 
-[Activity와 Fragment 차이](#Activity와 Fragment 차이)
+[Activity와 Fragment 차이](#Activity와-Fragment-차이)
 
-[Layout 클래스 종류](#Layout 클래스 종류)
+[Layout 클래스 종류](#Layout-클래스-종류)
 
-[Kotlin 언어](#Kotlin 언어)
+[Kotlin 언어](#Kotlin-언어)
 
-[코틀린과 자바 차이점](#코틀린과 자바 차이점)
+[코틀린과 자바 차이점](#코틀린과-자바-차이점)
 
-[기타 개념](#
+[기타 개념](#기타-념)
 
 ---
 
