@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:orientation="vertical">
 
@@ -45,29 +45,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0.7"
-            android:text="example@zeroweb.com"
-            android:visibility="visible" />
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="골드를 유지하려면, 계정을 만드세요!"
-                android:gravity="center"
-                android:drawableStart="@drawable/ic_warring_m"
-                android:background="@drawable/balloon_long_white"
-                android:textColor="@color/colorRed"
-                android:visibility="visible"/>
-        </FrameLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:text="example@zeroweb.com"
+                android:visibility="visible" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="골드를 유지하려면, 계정을 만드세요!"
-            android:textColor="@color/colorRed"
-            android:visibility="gone" />
+            <TextView
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:layout_width="257dp"
+                android:layout_height="50dp"
+                android:background="@drawable/balloon_long_white"
+                android:drawableStart="@drawable/ic_warring_m"
+                android:gravity="center"
+                android:text="골드를 유지하려면, 계정을 만드세요!"
+                android:textColor="@color/colorRed"
+                android:visibility="visible" />
+        </FrameLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -122,14 +120,7 @@
             android:gravity="start"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical">
+            <LinearLayout style="@style/menuItem">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -144,14 +135,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical">
+            <LinearLayout style="@style/menuItem">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -166,14 +150,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical">
+            <LinearLayout style="@style/menuItem">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -209,11 +186,11 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="#741F97D1"
-            android:src="@drawable/invite_banner"
-            android:contentDescription="배너" />
+            android:contentDescription="배너"
+            android:src="@drawable/invite_banner" />
 
         <RelativeLayout
             android:id="@+id/version"
@@ -260,7 +237,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/textView9"
@@ -367,6 +346,9 @@
             android:background="#000000" />
 
         <TextView
+            android:focusable="true"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:drawableEnd="@drawable/arrow_right_gray"
