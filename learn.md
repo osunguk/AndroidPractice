@@ -1,8 +1,39 @@
 ### 안드로이드 스튜디오 프로젝트 디렉토리 구조
 
+공부해야할 것
+
+- [ ] 프래그먼트 백스택
+- [ ] Intent
+- [ ] Fragment Manager
+- [ ] 라이프 사이클
+- [ ] inflate & inflator
+- [ ] it 개념
+- [ ] 람다
+- [ ] https://www.androidhuman.com/tag/kotlin/
+
+## Index
+
+[디렉토리 구조](#app)
+
+[Gradle Scripts](#Gradle Scripts)
+
+[findViewById() 없애기](#findViewById() 없애기)
+
+[NullPointException 피하기](#NullPointException 피하기 )
+
+[Activity와 Fragment 차이](#Activity와 Fragment 차이)
+
+[Layout 클래스 종류](#Layout 클래스 종류)
+
+[Kotlin 언어](#Kotlin 언어)
+
+[코틀린과 자바 차이점](#코틀린과 자바 차이점)
+
+[기타 개념](#기타 개념)
+
 ---
 
-**app**
+### **app**
 
 +- manifest	: 앱의 모든 설정내용 (AndroidManifest.xml)
 
@@ -20,11 +51,50 @@
 
 
 
-**Gradle Scripts**
+### **Gradle Scripts**
 
-bulid.gradle (:app)
+- bulid.gradle (:app)
 
-bulid.gradle (:Project name)
+  > 개별 모듈을 위한 빌드 스크립트
+
+  크게 3가지로 구분된다. apply plugin 블럭, android 블럭, dependencies 블럭
+
+  1. apply plugin 블럭
+     플러그인을 추가할 때 사용 (자체적으로 제작 or 수정도 가능은 하다)
+
+  2. android 블러
+     기본적으로 AndroidManifest.xml 의 속성을 재정의하는 목적으로 활용
+     (AndroidManifest.xml 보다 우선순위가 높다)
+
+  3. dependencies 블럭
+
+     외부 라이브러리를 관리하기 위한 블럭
+     
+
+- bulid.gradle (:Project name)
+
+  > 빌드 스크립트 & 전체 프로젝트 대상
+
+  안드로이드 gradle 플러그인 정보 설정
+
+  보통 하나의 프로젝트에 하나의 모듈이라 크게 건드릴건 없다. ~~아직은 그렇다~~
+
+- settings.gradle
+
+  > 모듈 목록 추가
+
+  내용은 ```include ':app'``` 밖에 없다. 만약 새로운 모듈을 추가한다면 콤마로 추가해주면 된다.
+
+- etc
+
+  - gradle.properties	속성파일
+  - local/properties       로컬 속성 파일
+
+### findViewById() 없애기
+
+---
+
+
 
 
 
@@ -40,6 +110,34 @@ bulid.gradle (:Project name)
 ### **Jetpack**
 
 ---
+
+
+
+
+
+### Activity와 Fragment 차이
+
+---
+
+- Activity
+  하나의 화면을 뜻하며 하나의 액티비티 클래스를 가진다. 하나의 클래스는 하나의 XML로 된 레이아웃 파일과 연결된다.
+  이런 상황에서 프래그먼트 액티비티란 개념이 나왔다. 간단히 말해서 하나의 액티비티안에 여러개의 액티비티를 보여주고 싶다는 목적으로 사용한다
+
+  (실제로 여러 액티비티를 넣는 것이 아니고 그렇게 보이도록 하는 것)
+
+> 정리하자면
+>
+> 로직은 하나의 액티비티가 존재하고, 그 액티비티 안에 다른 액티비리티들을 넣고 싶다면
+>
+> 다른 액티비티들(넣는, 들어가는 액티비티)은 Fragment를 상속받는 액티비티여야 한다
+
+
+
+추가) 프래그먼트는 액티비티 내에서 화면 UI의 일부를 나타낸다. 여러 개의 프래그먼트를 조합하여 액티비티가 출력하는 한 화면의 UI를 구성할 수 있으며 하나의 프래그먼트는 재사용성을 가진다
+
+프래그먼트는 액티비티처럼 생명주기를 가지고 있으며 액티비티 실행 중에도 화면에 동적으로 추가되거나 다른 프래그먼트로 교체가 가능하다
+
+기본적으로 한 개의 액티비티에 들어가는 화면 요소를 프래그먼트 단위로 나누어 관리하기 때문에 레아웃을 분리 관리할 수 있고, 액티비티의 화면 구성을 위한 레이아웃의 복잡도도 줄일 수 있다.
 
 
 
@@ -144,7 +242,147 @@ bulid.gradle (:Project name)
   
   ```
 
-  
+
+
+
+### 코틀린과 자바 차이점
+
+----
+
+1. **변수/상수**
+
+java
+
+```java
+String strVar = "";			// 변수
+final String strVal = ""	// 상수
+```
+
+Kotlin
+
+```kotlin
+var strVar: String = "" 	// 변수
+val strVar: String = ""		// 상수
+```
+
+2. **NRE**
+
+java
+
+```java
+@Nullable String strNullable = null;
+@NonNull String strNonNull = "";
+
+if (strNonNull != null){
+    strNonNull.split('/');
+}
+```
+
+kotlin
+
+```kotlin
+var strNullable: String? = null
+var strNonNull" String = ""
+
+strNullable?.split('/')
+```
+
+3. **getter / setter**
+
+java
+
+```java
+PersonKotlin person = new PersonKotlin("hellojdh",40,123,1234);
+String name = person.getName();
+int age = person.getAge();
+int tall = person.getTall();
+int person_id = person.getPerson_id();
+person.toString();
+person.hashCode();
+```
+
+kotlin
+
+```kotlin
+var person = PersonKotlin("hellojdh",25,176,12345)
+var name = person.name
+var age = person.age
+var tall = person.tall
+var person_id = person.person_id
+person.toString()
+person.hashCode()
+```
+
+4. **변수 출력**
+
+java
+
+```java
+String ex1 = "예제입니다.";
+int ex2    = 1;
+System.out.println("예제의 결과는 :: "+ex1+" 숫자는 :: "+ex2);
+```
+
+kotlin
+
+```kotlin
+var ex1 = "예제입니다."
+var ex2 = 1
+println("예제의 결과는 :: $ex1 숫자는 :: $ex2")
+
+var person = PersonKotlin("hellojdh",123,456,12345,PersonKotlin.Cloth(1,2))
+println("이름은 ${person.name} 이며, 나이는 ${person.age} 입니다.")
+```
+
+5. **상속**
+
+java
+
+```java
+pubic class Mainactivity extends AppCompatActivity { ... }
+```
+
+kotlin
+
+```kotlin
+class MainactivityKt : AppCompatActivity, OnclickListener { ... }
+// 인터페이스 추가는 , 로 추가
+```
+
+6. **함수 표현**
+
+```
+// Java
+[public/private/protected] ReturnType 함수이름(Type 변수들){
+  [return]
+}
+
+// Kotlin
+[public/private/protected] fun 함수이름(Type 변수들): ReturnType{
+  [return]
+}
+```
+
+7. **클래스 표현법**
+
+```
+// Java
+public class Person {
+  private final String name;
+  public Person(String name){
+    this.name = name;
+  }
+}
+
+// Kotlin
+class Person constructor(val name: String){}
+```
+
+
+
+
+
+
 
 ### 기타 개념
 
