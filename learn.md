@@ -9,6 +9,7 @@
 - [ ] inflate & inflator
 - [ ] it 개념
 - [ ] 람다
+- [ ] 4대요소 (액티비티, 서비스, 방송 수신자, 콘텐츠 제공자) + a(인텐트, 뷰, 프래그먼트)
 - [ ] https://www.androidhuman.com/tag/kotlin/
 
 ## Index
@@ -23,13 +24,15 @@
 
 [Activity와 Fragment 차이](#Activity와-Fragment-차이)
 
+[4대 요소](#4대-요소)
+
 [Layout 클래스 종류](#Layout-클래스-종류)
 
 [Kotlin 언어](#Kotlin-언어)
 
 [코틀린과 자바 차이점](#코틀린과-자바-차이점)
 
-[기타 개념](#기타-념)
+[기타 개념](#기타-개념)
 
 ---
 
@@ -49,7 +52,7 @@
 	
 	+- values	: 문자열, 색상 등 앱의 뷰와 관련된 설정 변수들 (strings.xml colors.xml styles.xml)
 
-
+[go to Index](#Index)
 
 ### **Gradle Scripts**
 
@@ -90,11 +93,13 @@
   - gradle.properties	속성파일
   - local/properties       로컬 속성 파일
 
+[go to Index](#Index)
+
 ### findViewById() 없애기
 
 ---
 
-
+[go to Index](#Index)
 
 
 
@@ -105,7 +110,7 @@
 ``lateinit`` 을 사용하여 Null 값이 들어가지 않도록 초기화가 가능하다
 해당 변수가 필요할 때 초기화가 진행되어 비어있는 Null 값을 넣어주지 않아도 된다.
 
-
+[go to Index](#Index)
 
 ### **Jetpack**
 
@@ -113,7 +118,7 @@
 
 
 
-
+[go to Index](#Index)
 
 ### Activity와 Fragment 차이
 
@@ -139,7 +144,42 @@
 
 기본적으로 한 개의 액티비티에 들어가는 화면 요소를 프래그먼트 단위로 나누어 관리하기 때문에 레아웃을 분리 관리할 수 있고, 액티비티의 화면 구성을 위한 레이아웃의 복잡도도 줄일 수 있다.
 
+[go to Index](#Index)
 
+
+
+### 4대 요소
+
+---
+
+- UI 화면을 나타내는 액티비티
+  액티비티는 사용자가 바라보는 인터페이스 화면을 가지고 있는 요소이며 레이아웃 파일로 구성한다. 실제 앱에서 동작하는 코드가 필요하며 이벤트를 처리하고 UI를 갱신한다
+
+  하나의 앱은 하나 이상의 액티비티를 가지며 하나의 액티비티는 여러 프래그먼트를 가질 수 있다
+
+  액티비티를 시작시켜주는 주체는 메인 스레드이며 액티비티를 제어하고 통제
+
+- 방송 수신자
+  안드로이드에서 발생하는 다양한 이벤트 및 정보를 받고 전달하는 요소
+
+- 콘텐츠 제공자
+  데이터를 관리하거나 다른 애플리케이션에 데이터를 제종하는 요소
+
+- Intent 
+  안드로이드 4대 요소 간에 메세지를  전달한다
+
+  2가지로 나뉘며 묵시적 인텐트와 명시적 인텐트가 있다 
+  묵시적 인텐트는 특정 클래스를 지정하지 않기 때문에 여러 개의 연관된 요소를 호출할 수 있다는 장점이 이다
+
+- 핸들러와 메세지 큐 
+
+
+
+
+
+
+
+[go to Index](#Index)
 
 ### Layout 클래스 종류
 
@@ -163,7 +203,7 @@
   이름은 View로 되어있지만 Layout 클래스의 종류들
   ![리스트 뷰와 그리드 뷰](https://t1.daumcdn.net/cfile/tistory/23148E39579842EB19)
 
-
+[go to Index](#Index)
 
 ### Kotlin 언어
 
@@ -242,7 +282,7 @@
   
   ```
 
-
+[go to Index](#Index)
 
 
 ### 코틀린과 자바 차이점
@@ -378,7 +418,7 @@ public class Person {
 class Person constructor(val name: String){}
 ```
 
-
+[go to Index](#Index)
 
 
 
@@ -412,8 +452,11 @@ class Person constructor(val name: String){}
 
   빌드 프로세스가 끝나면 배포, 테스트 또는 외부 사용자에게 출시할 수 있는 앱의 디버그 apk 또는 출시 apk 가 생성된다
 
-  
+- WYSIWYG
 
-  
+  > <u>W</u>hat <u>Y</u>ou <u>S</u>ee <u>I</u>s <u>W</u>hat <u>Y</u>ou <u>G</u>et
+  > 보이는 대로 얻는다!
+  >
+  > [go to Index](#Index)
 
-- 
+[go to Index](#Index)
