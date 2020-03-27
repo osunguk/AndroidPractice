@@ -109,7 +109,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:alpha="0.1"
             android:background="#000000" />
@@ -231,15 +231,12 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            style="@style/etcMenuBox">
 
             <TextView
                 android:id="@+id/textView9"
@@ -272,29 +269,41 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:drawableEnd="@drawable/arrow_right_gray"
-            android:gravity="center_vertical"
-            android:text="사용법"
-            android:textSize="15dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/etcMenuBox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="사용법"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            style="@style/etcMenuBox">
 
             <TextView
                 android:id="@+id/user_support"
@@ -327,66 +336,120 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:drawableEnd="@drawable/arrow_right_gray"
-            android:gravity="center_vertical"
-            android:text="알림설정"
-            android:textSize="15dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/etcMenuBox">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="알림설정"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
-        <TextView
-            android:focusable="true"
-            android:clickable="true"
-            android:background="?attr/selectableItemBackground"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:drawableEnd="@drawable/arrow_right_gray"
-            android:gravity="center_vertical"
-            android:text="이용약관"
-            android:textSize="15dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/etcMenuBox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="이용약관"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:drawableEnd="@drawable/arrow_right_gray"
-            android:gravity="center_vertical"
-            android:text="이용약관"
-            android:textSize="15dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/etcMenuBox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="이용약관"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:drawableEnd="@drawable/arrow_right_gray"
-            android:gravity="center_vertical"
-            android:text="이용약관"
-            android:textSize="15dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/etcMenuBox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="이용약관"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2px"
+            android:layout_height="2dp"
             android:alpha="0.1"
             android:background="#000000" />
 
