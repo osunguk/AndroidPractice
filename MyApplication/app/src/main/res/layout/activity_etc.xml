@@ -53,15 +53,15 @@
                 android:visibility="visible" />
 
             <TextView
-                android:paddingRight="15dp"
-                android:paddingLeft="10dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="15dp"
                 android:layout_width="257dp"
                 android:layout_height="50dp"
                 android:background="@drawable/balloon_long_white"
                 android:drawableStart="@drawable/ic_warring_m"
                 android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
                 android:text="골드를 유지하려면, 계정을 만드세요!"
                 android:textColor="@color/colorRed"
                 android:visibility="visible" />
@@ -114,10 +114,13 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start"
+            android:columnCount="3"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+
             android:orientation="horizontal">
 
             <LinearLayout style="@style/menuItem">
@@ -181,9 +184,7 @@
                     android:text="쿠폰샵"
                     android:textStyle="bold" />
             </LinearLayout>
-
-        </LinearLayout>
-
+        </GridLayout>
 
         <ImageView
             android:layout_width="match_parent"
@@ -235,8 +236,7 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:id="@+id/textView9"
@@ -274,8 +274,7 @@
             android:background="#000000" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -302,8 +301,7 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:id="@+id/user_support"
@@ -340,8 +338,7 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:id="@+id/textView"
@@ -369,8 +366,7 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -397,8 +393,7 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -425,8 +420,7 @@
             android:alpha="0.1"
             android:background="#000000" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            style="@style/etcMenuBox">
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/etcMenuBox">
 
             <TextView
                 android:layout_width="wrap_content"
