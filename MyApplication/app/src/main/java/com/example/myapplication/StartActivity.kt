@@ -37,6 +37,10 @@ class StartActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button5).setOnClickListener {
             startActivity(Intent(this, EtcActivity::class.java))
         }
+
+        findViewById<Button>(R.id.button7).setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
+        }
     }
 
 
