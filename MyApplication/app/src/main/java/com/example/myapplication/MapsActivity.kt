@@ -1,9 +1,7 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -26,9 +24,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        // Add a marker in Sydney and move the camera
         val seoul  = LatLng(37.52487, 126.92723)
-        mMap.addMarker(MarkerOptions().position(seoul).title("Marker in seoul"))
+        val markerOptions = MarkerOptions()
+        markerOptions.position(seoul)
+        markerOptions.title("Seoul")
+        markerOptions.snippet("대한민국의 수도")
+        markerOptions.
+        mMap.addMarker(markerOptions)
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(seoul))
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(10.0F))
     }
 }
